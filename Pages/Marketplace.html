@@ -1,4 +1,3 @@
-<!-- marketplace.html (Marketplace Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,117 +6,179 @@
     <title>Sacred Studios™️ - Marketplace</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
         }
         header {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: white;
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        header p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            opacity: 0.9;
         }
         nav {
-            background-color: #333;
-            padding: 10px;
+            background-color: #222;
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         nav a {
-            color: white;
-            margin: 0 15px;
+            color: #fff;
+            margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #6a11cb;
         }
         .container {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1, h2 {
-            color: #007bff;
+        h2 {
+            text-align: center;
+            color: #2575fc;
+            margin-bottom: 40px;
         }
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
         .product-card {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
             text-align: center;
         }
-        .product-card h3 {
-            margin-top: 0;
+        .product-card:hover {
+            transform: translateY(-10px);
         }
-        .product-card a {
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-info h3 {
+            margin: 0 0 10px;
+            color: #222;
+        }
+        .product-info p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .btn {
             display: inline-block;
-            margin: 10px 5px;
-            padding: 8px 12px;
-            background-color: #007bff;
+            padding: 10px 20px;
+            background-color: #2575fc;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 6px;
+            margin: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
-        .product-card a:hover {
-            background-color: #0056b3;
+        .btn:hover {
+            background-color: #1a5bb8;
+        }
+        .btn-secondary {
+            background-color: #6a11cb;
+        }
+        .btn-secondary:hover {
+            background-color: #5609a8;
         }
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #222;
+            color: #aaa;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Sacred Studios™️ Marketplace</h1>
-        <p>Discover Our ROX Products</p>
+        <p>Premium ROX Tools & Solutions for Developers</p>
     </header>
+
     <nav>
-        <a href="index.html">Home</a>
+        <a href="../index.html">Home</a> <!-- Adjust path if not using /pages folder -->
         <a href="marketplace.html">Marketplace</a>
-        <!-- Add more links as needed for product pages and code viewers -->
+        <!-- Add more navigation links later -->
     </nav>
+
     <div class="container">
         <h2>Featured Products</h2>
+
         <div class="product-grid">
+            <!-- Product 1 -->
             <div class="product-card">
-                <h3>Product 1: ROX Toolkit</h3>
-                <p>A comprehensive toolkit for ROX development, including essential libraries and utilities.</p>
-                <a href="product1.html">View Details</a>
-                <a href="codeviewer1.html">View Code</a>
+                <img src="https://via.placeholder.com/400x200/6a11cb/ffffff?text=ROX+Toolkit" alt="ROX Toolkit">
+                <div class="product-info">
+                    <h3>ROX Toolkit Pro</h3>
+                    <p>A complete suite of utilities, libraries, and templates to accelerate your ROX development workflow.</p>
+                    <a href="product-rox-toolkit.html" class="btn">View Details</a>
+                    <a href="codeviewer-rox-toolkit.html" class="btn btn-secondary">View Code</a>
+                </div>
             </div>
+
+            <!-- Product 2 -->
             <div class="product-card">
-                <h3>Product 2: ROX Engine Pro</h3>
-                <p>Advanced engine for building scalable ROX applications with high performance.</p>
-                <a href="product2.html">View Details</a>
-                <a href="codeviewer2.html">View Code</a>
+                <img src="https://via.placeholder.com/400x200/2575fc/ffffff?text=ROX+Engine+Pro" alt="ROX Engine Pro">
+                <div class="product-info">
+                    <h3>ROX Engine Pro</h3>
+                    <p>High-performance runtime engine optimized for large-scale ROX applications.</p>
+                    <a href="product-rox-engine.html" class="btn">View Details</a>
+                    <a href="codeviewer-rox-engine.html" class="btn btn-secondary">View Code</a>
+                </div>
             </div>
+
+            <!-- Product 3 -->
             <div class="product-card">
-                <h3>Product 3: ROX UI Components</h3>
-                <p>Reusable UI components designed for modern ROX interfaces.</p>
-                <a href="product3.html">View Details</a>
-                <a href="codeviewer3.html">View Code</a>
+                <img src="https://via.placeholder.com/400x200/6a11cb/ffffff?text=ROX+UI+Components" alt="ROX UI Components">
+                <div class="product-info">
+                    <h3>ROX UI Components</h3>
+                    <p>Modern, responsive, and fully customizable UI kit built specifically for ROX projects.</p>
+                    <a href="product-ui-components.html" class="btn">View Details</a>
+                    <a href="codeviewer-ui-components.html" class="btn btn-secondary">View Code</a>
+                </div>
             </div>
-            <!-- Add more product cards as needed -->
+
+            <!-- Add more products here as needed -->
         </div>
     </div>
+
     <footer>
         &copy; 2025 Sacred Studios™️. All rights reserved.
     </footer>
 </body>
-</html>
+                    </html>
