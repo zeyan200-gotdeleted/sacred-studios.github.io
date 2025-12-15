@@ -1,4 +1,3 @@
-<!-- index.html (Home Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,34 +6,154 @@
     <title>Sacred Studios™️ - Home</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
         }
         header {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: white;
-            padding: 20px;
+            padding: 100px 20px;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            opacity: 0.9;
         }
         nav {
-            background-color: #333;
-            padding: 10px;
+            background-color: #222;
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         nav a {
-            color: white;
-            margin: 0 15px;
+            color: #fff;
+            margin: 0 25px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #6a11cb;
         }
         .container {
             max-width: 1200px;
+            margin: 60px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .intro {
+            margin-bottom: 60px;
+        }
+        .intro h2 {
+            color: #2575fc;
+            font-size: 2.5rem;
+        }
+        .intro p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 20px auto;
+            color: #555;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #2575fc;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background-color: #1a5bb8;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .feature-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            color: #6a11cb;
+        }
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 30px;
+            margin-top: 80px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                font-size: 1.2rem;
+            }
+            nav a {
+                display: block;
+                margin: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sacred Studios™️</h1>
+        <p>Your Premier ROX Development Company</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pages/marketplace.html">Marketplace</a>
+        <!-- Add more links later (e.g., About, Contact) -->
+    </nav>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Innovative ROX Solutions</h2>
+            <p>We specialize in cutting-edge ROX development, delivering powerful tools, engines, and components that empower developers to build the next generation of applications.</p>
+            <a href="pages/marketplace.html" class="cta-button">Explore Marketplace</a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Premium Tools</h3>
+                <p>High-quality, battle-tested ROX toolkits and libraries designed for performance and ease of use.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Code Transparency</h3>
+                <p>Every product includes a dedicated code viewer so you can inspect, learn, and trust the implementation.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Expert Support</h3>
+                <p>Direct access to our team for consulting, custom development, and ongoing support.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Sacred Studios™️. All rights reserved.
+    </footer>
+</body>
+</html>            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
