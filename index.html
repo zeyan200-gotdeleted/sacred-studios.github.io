@@ -3,38 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacred Studios™️ - Home</title>
+    <title>Sacred Studios™️ - Premier Roblox Development Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: rgba(15, 23, 42, 0.8);
+            --accent: #00ffcc;
+            --purple: #a78bfa;
+            --blue: #3b82f6;
+            --text: #e2e8f0;
+        }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Roboto', sans-serif;
+            background-image: radial-gradient(circle at top right, #1e293b, var(--bg));
         }
         header {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            padding: 100px 20px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding: 120px 20px 80px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://via.placeholder.com/1920x1080/1e293b/00ffcc?text=Roblox+Studio+Background') center/cover no-repeat;
+            opacity: 0.2;
         }
         header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
             margin: 0;
-            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px var(--accent);
         }
         header p {
             font-size: 1.5rem;
-            margin-top: 15px;
-            opacity: 0.9;
+            max-width: 800px;
+            margin: 20px auto;
         }
         nav {
-            background-color: #222;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
             padding: 15px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         nav a {
-            color: #fff;
+            color: var(--text);
+            margin: 0 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        .hero-cta {
+            text-align: center;
+            margin: 60px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, var(--blue), var(--purple));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            transition: transform 0.3s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 204, 0.2);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+        }
+        .service-card h3 {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+        footer {
+            background: #0a0e17;
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.8rem; }
+            nav a { display: block; margin: 15px 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sacred Studios™️</h1>
+        <p>Premier Roblox Development Studio – Building Epic Experiences Since 2025</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pages/marketplace.html">Marketplace</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="hero-cta">
+            <h2 style="color: var(--accent);">Crafting Next-Level Roblox Games & Assets</h2>
+            <p>We specialize in custom Roblox experiences, scripts, UI/UX, models, and plugins.</p>
+            <a href="pages/marketplace.html" class="cta-button">Browse Our Assets</a>
+        </div>
+
+        <div class="services">
+            <div class="service-card">
+                <h3>Game Development</h3>
+                <p>Full Roblox experiences – from tycoons to simulators and obbies.</p>
+            </div>
+            <div class="service-card">
+                <h3>Asset Creation</h3>
+                <p>High-quality models, animations, UI kits, and scripts ready for your game.</p>
+            </div>
+            <div class="service-card">
+                <h3>Custom Commissions</h3>
+                <p>Bring your vision to life with tailored Roblox solutions.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Sacred Studios™️. All rights reserved. Powered by Roblox Studio.
+    </footer>
+</body>
+</html>            color: #fff;
             margin: 0 25px;
             text-decoration: none;
             font-weight: bold;
